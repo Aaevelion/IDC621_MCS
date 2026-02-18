@@ -31,7 +31,7 @@ This implementation extends the original model to support:
 6. [Enhanced Model](#enhanced-model)
 7. [Complete Time Step Algorithm](#complete-time-step-algorithm)
 8. [Implementation Notes](#implementation-notes)
-
+9. [Some Plots](#some-plots)
 ---
 
 
@@ -782,25 +782,6 @@ For predator-only survival:
   - Will always go extinct without prey
 
 
-<!-- ---
-
-### 6. Validation Against Lotka-Volterra
-
-The CA should produce dynamics similar to discrete Lotka-Volterra equations:
-```
-x₁(t+1) = x₁(t)[(1 + k₁) - a₁₁x₁(t)] - a₁₂x₁(t)x₂(t)
-x₂(t+1) = x₂(t)[(1 + k₂) - a₂₂x₂(t)] + a₂₁x₁(t)x₂(t)
-```
-
-**Approximate parameter mapping:**
-- k₁ (prey growth) ≈ bp × 2
-- k₂ (predator growth) ≈ -dh + bh × dp
-- a₁₂ (predation rate) ≈ dp × 10
-- a₂₁ (conversion) ≈ bh × dp × 5
-
-These are rough approximations; exact calibration requires fitting.
-
---- -->
 
 ### 2. Common Issues and Solutions
 
@@ -840,3 +821,25 @@ This cellular automaton implements a **fully local, spatially explicit** predato
 The model produces population dynamics qualitatively similar to classical Lotka-Volterra differential equations while also providing **spatial information** about organism distribution and movement patterns.
 
 ---
+
+## Some Plots
+
+<img  src = ./assets/CA_only_prey_no_predator.gif>
+
+**Fig 2: Model when no predator is present:** As can be seen in the graph on the top-right, the growth follows a logistic growth pattern, plateau-ing to a limit. This is expected behaviour, as we expect the population to be therefore limited by the amount of available resources (i.e. carrying-capacity).
+
+<img src = ./assets/CA_no_prey_only_predator_1.gif>
+
+**Fig 3: Model when no prey is present:** As expected, the predator population dies out as soon as there is no prey to sustain the predator population
+
+<img src = "./assets/equilibrium.gif">
+
+**Fig 4: Model when equilibrium (with oscillations) between the predator and prey population has been attained has been reached:** The point in the phase diagram around which the oscillations occur is a neutral stable point, as also predicted from the solution of the Lotka Volterra equations. Here, `bh = 0.6`, `dh = 0.4`, `dp=0.9`
+
+<img src = ./assets/predator_prey_animation_20260218_174845.gif> 
+
+**Fig 5: Population with a much more larger grid, consisting of both types of predators and prey**. While it is difficult to obtain configuration wherein all species can coexist without getting extinct, it is however possible if we can make adjust the strength's of both the predators so as to create a "niche differentiation" as is somewhat evident here (the population of predator 2, while very less in comparison, doesn't hit 0)
+
+## Code Availability
+
+Code can be obtained from the Jupyter notebook as linked [here](./MS21213_RajnilMukherjee_PredatorPreyModel_IDC621.ipynb), and also availble in the GitHub repository.
