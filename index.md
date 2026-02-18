@@ -1,6 +1,11 @@
 ---
 created: 2025-05-18T01:07
+
 ---
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 # Predator-Prey Cellular Automaton Model
 
 Based on: Cattaneo, Dennunzio, and Farina (2006) - "A Full Cellular Automaton to Simulate Predator-Prey Systems"
