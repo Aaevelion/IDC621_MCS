@@ -77,19 +77,17 @@ This is a **fully local** model - all interactions occur only between neighborin
 Each cell (x, y) can be in one of the following states:
 
 ### Primary States (visible)
-| State | Symbol | Description |
-|-------|--------|-------------|
-| **Empty** | `0a` | No organism present |
-| **Prey** | `1` | Contains a prey organism |
-| **Predator 1** | `2a` | Contains predator type 1 |
-| **Predator 2** | `3a` | Contains predator type 2 (optional) |
+
+- **Empty** (`0a`): No organism present
+- **Prey** (`1`): Contains a prey organism  
+- **Predator 1** (`2a`): Contains predator type 1
+- **Predator 2** (`3a`): Contains predator type 2 (optional)
 
 ### Temporary States (computational)
-| State | Symbol | Description |
-|-------|--------|-------------|
-| **Empty after attack** | `0b` | Cell just emptied (prey was killed) |
-| **Predator 1 fed** | `2b` | Predator 1 just successfully hunted |
-| **Predator 2 fed** | `3b` | Predator 2 just successfully hunted |
+
+- **Empty after attack** (`0b`): Cell just emptied (prey was killed)
+- **Predator 1 fed** (`2b`): Predator 1 just successfully hunted
+- **Predator 2 fed** (`3b`): Predator 2 just successfully hunted
 
 **Note:** Temporary states only exist during computation and are converted back to primary states at the end of each time step.
 
@@ -98,22 +96,37 @@ Each cell (x, y) can be in one of the following states:
 ## Parameters
 
 ### Prey Parameters
-| Symbol | Name | Range | Description |
-|--------|------|-------|-------------|
-| **bp** | Prey birth probability | [0, 1] | Probability that one neighboring prey reproduces into an empty cell |
-| **dp** | Prey death probability per predator | [0, 1] | Probability that one neighboring predator kills the prey |
+
+**bp** - Prey birth probability
+- Range: 0 to 1
+- Description: Probability that one neighboring prey reproduces into an empty cell
+- Typical value: 0.6
+
+**dp** - Prey death probability per predator
+- Range: 0 to 1  
+- Description: Probability that one neighboring predator kills the prey
+- Typical value: 0.7
 
 ### Predator Parameters
-| Symbol | Name | Range | Description |
-|--------|------|-------|-------------|
-| **bh** | Predator birth probability | [0, 1] | Probability that a predator reproduces after successfully hunting |
-| **dh** | Predator death probability | [0, 1] | Probability that a predator dies naturally each time step |
+
+**bh** - Predator birth probability
+- Range: 0 to 1
+- Description: Probability that a predator reproduces after successfully hunting
+- Typical value: 0.3
+
+**dh** - Predator death probability
+- Range: 0 to 1
+- Description: Probability that a predator dies naturally each time step
+- Typical value: 0.4
 
 ### Movement Parameter
-| Symbol | Name | Range | Description |
-|--------|------|-------|-------------|
-| **r** | Movement sensing radius | [1, 3] | Radius of Moore neighborhood used for sensing (typical: 2) |
 
+**r** - Movement sensing radius
+- Range: 1 to 3
+- Description: Radius of Moore neighborhood used for sensing
+- Typical value: 2
+
+---
 <!-- ### Typical Parameter Values
 - **bp** = 0.6
 - **dp** = 0.7
