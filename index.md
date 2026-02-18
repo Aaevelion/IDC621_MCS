@@ -32,6 +32,7 @@ This implementation extends the original model to support:
 7. [Complete Time Step Algorithm](#complete-time-step-algorithm)
 8. [Implementation Notes](#implementation-notes)
 9. [Some Plots](#some-plots)
+10. [Code Availability](#code-availability)
 ---
 
 
