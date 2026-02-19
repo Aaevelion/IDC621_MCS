@@ -832,11 +832,11 @@ The model produces population dynamics qualitatively similar to classical Lotka-
 
 ## Some Plots
 
-<img src = ./assets/CA_only_prey_no_predator.gif>
+<img src = "./assets/CA_only_prey_no_predator.gif">
 
 **Fig 2: Model when no predator is present:** As can be seen in the graph on the top-right, the growth follows a logistic growth pattern, plateau-ing to a limit. This is expected behaviour, as we expect the population to be therefore limited by the amount of available resources (i.e. carrying-capacity).
 
-<img src = ./assets/CA_no_prey_only_predator_1.gif>
+<img src = "./assets/CA_no_prey_only_predator_1.gif">
 
 **Fig 3: Model when no prey is present:** As expected, the predator population dies out as soon as there is no prey to sustain the predator population
 
@@ -844,7 +844,7 @@ The model produces population dynamics qualitatively similar to classical Lotka-
 
 **Fig 4: Model when equilibrium (with oscillations) between the predator and prey population has been attained has been reached:** The point in the phase diagram (in the bottom right) around which the oscillations occur is a neutral stable point, as also predicted from the solution of the Lotka Volterra equations. Here, `bh = 0.6`, `dh = 0.4`, `dp=0.9`
 
-<img src = ./assets/predator_prey_animation_20260218_174845.gif> 
+<img src = "./assets/predator_prey_animation_20260218_174845.gif"> 
 
 **Fig 5: Population with a much more larger grid, consisting of both types of predators and prey**. While it is difficult to obtain configuration wherein all species can coexist without getting extinct, it is however possible if we can make adjust the strength's of both the predators so as to create a "niche differentiation" as is somewhat evident here (the population of predator 2, while very less in comparison, doesn't hit 0)
 
