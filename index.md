@@ -16,6 +16,12 @@ This implementation extends the original model to support:
 - Fully local cellular automaton rules
 - Configurable initial populations
 
+**Rajnil Mukherjee
+\
+MS21213
+\
+Department of Physical Sciences**
+
 ---
 
 ## Table of Contents
@@ -43,9 +49,9 @@ This implementation extends the original model to support:
 
 The predator-prey model, describing the competition between predator and prey in an ecological system, is one of the most popular and widely studied biological models. One of the most fundamental ways to study such a system is by using the Lotka-Volterra equations, a set of non-linear ordinary partial differential equations. It assumes that, for a set of fixed positive constants A (the growth rate of prey), B (the rate at which predators destroy prey), C (the death rate of predators), and D (the rate at which predators increase by consuming prey), the following conditions hold :
 
-1. A prey population x increases at a rate $dx=Axdt$ (proportional to the number of prey) but is simultaneously destroyed by predators at a rate $dx=-Bxydt$ (proportional to the product of the numbers of prey and predators).
+1. A prey population x increases at a rate dx=Axdt (proportional to the number of prey) but is simultaneously destroyed by predators at a rate dx=-Bxydt (proportional to the product of the numbers of prey and predators).
 
-2. A predator population y decreases at a rate $dy=-Cydt$ (proportional to the number of predators), but increases at a rate $dy=Dxydt$ (again proportional to the product of the numbers of prey and predators). 
+2. A predator population y decreases at a rate dy=-Cydt (proportional to the number of predators), but increases at a rate dy=Dxydt (again proportional to the product of the numbers of prey and predators). 
 
  This gives the coupled differential equations
 
@@ -836,7 +842,7 @@ The model produces population dynamics qualitatively similar to classical Lotka-
 
 <img src = "./assets/equilibrium.gif">
 
-**Fig 4: Model when equilibrium (with oscillations) between the predator and prey population has been attained has been reached:** The point in the phase diagram around which the oscillations occur is a neutral stable point, as also predicted from the solution of the Lotka Volterra equations. Here, `bh = 0.6`, `dh = 0.4`, `dp=0.9`
+**Fig 4: Model when equilibrium (with oscillations) between the predator and prey population has been attained has been reached:** The point in the phase diagram (in the bottom right) around which the oscillations occur is a neutral stable point, as also predicted from the solution of the Lotka Volterra equations. Here, `bh = 0.6`, `dh = 0.4`, `dp=0.9`
 
 <img src = ./assets/predator_prey_animation_20260218_174845.gif> 
 
