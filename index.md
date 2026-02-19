@@ -33,6 +33,7 @@ This implementation extends the original model to support:
 8. [Implementation Notes](#implementation-notes)
 9. [Some Plots](#some-plots)
 10. [Code Availability](#code-availability)
+
 ---
 
 
@@ -840,6 +841,8 @@ The model produces population dynamics qualitatively similar to classical Lotka-
 <img src = ./assets/predator_prey_animation_20260218_174845.gif> 
 
 **Fig 5: Population with a much more larger grid, consisting of both types of predators and prey**. While it is difficult to obtain configuration wherein all species can coexist without getting extinct, it is however possible if we can make adjust the strength's of both the predators so as to create a "niche differentiation" as is somewhat evident here (the population of predator 2, while very less in comparison, doesn't hit 0)
+
+---
 
 ## Code Availability
 
