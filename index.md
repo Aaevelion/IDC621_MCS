@@ -832,7 +832,7 @@ The model produces population dynamics qualitatively similar to classical Lotka-
 
 ## Some Plots
 
-<img  src = ./assets/CA_only_prey_no_predator.gif>
+<img src = ./assets/CA_only_prey_no_predator.gif>
 
 **Fig 2: Model when no predator is present:** As can be seen in the graph on the top-right, the growth follows a logistic growth pattern, plateau-ing to a limit. This is expected behaviour, as we expect the population to be therefore limited by the amount of available resources (i.e. carrying-capacity).
 
